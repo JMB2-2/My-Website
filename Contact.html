@@ -1,0 +1,91 @@
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Bean & Brew</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+     
+      <nav class="navbar">
+        <div class="nav-left">
+            <a href="Drink.html">DRINK ☕️</a>
+            <a href="Food.html">FOOD 🥐</a>
+        </div>
+
+        <div class="nav-center">
+            <div class="dropdown">
+                <button class="dropbtn" aria-haspopup="true" aria-expanded="false" onclick="toggleDropdown(this)">HOME 🏠▾</button>
+                    <div class="dropdown-content" id="home-menu">
+                        <a href="Home.html">HOME 🏠</a>
+                        <a href="AboutUs.html">ABOUT US</a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="Community.html">COMMUNITY 🤝🏻</a>
+            <a href="Contact.html">BOOK A TABLE/CONTACT 📖</a>
+        </div>
+      </nav>
+
+
+
+
+    <main>
+       
+        <header>
+            <h1>BOOK A TABLE/CONTACT US</h1>
+        </header>
+        
+        
+        
+      <section class="contact-section">
+
+        <div class="background"></div>
+
+          <div class="contact-content">
+            <h1>Contact / Book a Table</h1>
+
+            <p class="contact-intro">
+            Fill out the form below to send us a message or request a table reservation. 
+            We’ll respond via email or phone as soon as possible.
+            </p>
+
+            <form id="contactForm">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="yourname@example.com" required>
+
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. +44 7123 456789" required>
+
+              <label for="message">Comment / Request:</label>
+              <textarea id="message" name="message" placeholder="Enter your message or table request" required></textarea>
+
+              <button type="submit">Submit</button>
+              </form>
+
+            <div id="successMessage" class="success-message">
+              ✅ Your request has been sent! We will respond via email or phone shortly.
+            </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="site-footer">
+  
+        <div class="footer-content">
+            <p>&copy; 2026 Bean & Brew. All rights reserved.</p>
+            <p>
+                <a href="Contact.html">Contact/Book a Table</a> | 
+            </p>
+        </div>
+
+    </footer>
+  
+    <script src="script.js"></script>
+    </body>
+</html>

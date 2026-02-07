@@ -1,0 +1,517 @@
+/* ==========================
+   MAIN BODY
+========================== */
+
+
+body {
+  background-color: #F5F1EC;
+  color: #2F2A26;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2 {
+  background-color: #FFFFFF;
+  color: #2F2A26;
+  text-decoration: overline;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-size: 32px;                
+}
+
+/* Desktop padding */
+h1 { padding: 80px 0; }
+h2 { padding: 80px 0; }
+
+
+
+
+/* ==========================
+   LINKS AND FOOTER
+   ========================== */
+
+
+a { 
+  text-decoration: none; /* gets rid of the underline dnt remove */
+  color: inherit;
+  cursor: pointer;
+}
+
+h2:hover { color: #D4A373; }
+
+.site-footer {
+  background-color: #2F2A26;    
+  color: #FFFFFF;               
+  padding: 20px 0;              
+  text-align: center;           
+  margin-top: 50px;             
+}
+
+.site-footer a {
+  color: #75E4B3;               
+  text-decoration: none;        
+  margin: 0 10px;               
+}
+
+.site-footer a:hover { color: #D4A373; }
+
+/* ==========================
+   NAVBAR
+========================== */
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background: #7F6244;
+  padding: 15px 20px;
+  position: relative;
+  border: 2px solid #2F2A26;
+  border-radius: 0;
+  flex-wrap: wrap;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  flex: 1;                  
+  justify-content: space-evenly; 
+}
+
+.nav-center {
+  position: absolute;       
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar a,
+.dropbtn {
+  color: #75E4B3;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.navbar a:hover { color: #D4A373; }
+
+
+
+
+/* ==========================
+    Dropdown 
+  ==========================*/
+
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: #2F2A26;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+  padding: 0;             
+  border-radius: 5px;      
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #75E4B3;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: #D4A373; 
+  color: #2F2A26;            
+}
+
+.dropdown-content.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================
+   HOME SCREEN IMAGES
+========================== */
+.image-row {  
+  position: relative;          
+  display: flex;
+  justify-content: center;
+  gap: 5vw;                  
+  padding: 50px 0;
+  overflow: hidden;           
+  align-items: center;
+  flex-wrap: wrap;             /* allow wrapping on mobile */
+}
+
+
+.image-row img {
+  z-index: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 300px;   /* this fixes left image not being the same size as the others dont remove*/
+  width: 300px;
+  height: 600px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.image-row .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/coffeebeans.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.gap-text {
+  z-index: 2;
+  font-size: clamp(16px,2vw,25px);             /* scales with viewport */
+  font-weight: bold;
+  color: #F5F1EC;
+  text-align: center;
+  min-width: 40px;
+}
+
+
+/* Hero section layout for video*/
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 60px;
+  background-color: white;
+}
+
+/* Text area */
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
+.hero-text h2 {
+  font-weight: normal;
+  color: #2F2A26;
+}
+
+/* Video area */
+.hero-video {
+  flex: 1;
+  max-width: 250px;
+  margin-left: -40px; 
+  margin-right: auto;
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  border: 2px solid #2F2A26;
+}
+
+/*==========================
+   ABOUT US PAGE
+   ==========================*/
+   
+  
+ .image-text {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 5vw;
+}
+
+/* reuse existing background style */
+.image-text .background {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/coffeebeans.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+/* new background style */
+.image-text .background-2{
+  position: absolute;
+  inset: 0;
+  background-image: url('images/coffeeshop.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+/* foreground layout */
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* image */
+
+.about-content img {
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* text */
+
+.about-text {
+  width: 60%;
+  background: rgba(47, 42, 38, 0.85); 
+  color: #F5F1EC;
+  padding: 30px;
+  border-radius: 8px;
+  font-family: 'Georgia', serif;
+  font-size: 18px;                
+  line-height: 1.6;
+}
+
+.community-link {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;          
+  flex-wrap: wrap; 
+}
+
+.community-link a {
+  color: #75E4B3;        
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.community-link a:hover {
+  color: #D4A373;
+}
+
+
+/* =================
+    Community Page
+  ================= */
+
+
+.about-content .slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 500px; 
+  height: 600px;    
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* All images stacked and hidden by default */
+.about-content .slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;                 /* hide all images initially */
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+/* Only the active image is visible */
+.about-content .slideshow img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* ============
+    Food & Drinks Page
+    ============ */
+
+.menu-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(47, 42, 38, 0.85);
+  color: #F5F1EC;
+  padding: 40px;
+  border-radius: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.menu-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-section h2 {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.allergen-box {
+  margin-top: 50px;
+  color: #75E4B3;
+}
+
+.allergen-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  color: #75E4B3;
+}
+
+.allergen-box th,
+.allergen-box td {
+  border: 1px solid #75E4B3;
+  padding: 10px;
+  text-align: center;
+}
+
+.allergen-note {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ====================
+  Contact/Book a Table
+  ===================== */
+
+
+.contact-section {
+  position: relative;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.contact-section .background {
+  position: absolute; 
+  inset: 0;
+  background-image: url('images/coffeeshop.jpg'); 
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(47, 42, 38, 0.85);
+  padding: 40px;
+  border-radius: 10px;
+  color: #F5F1EC;
+  font-family: 'Georgia', serif;
+}
+
+.contact-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-content label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-content input,
+.contact-content textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-content textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-content button {
+  background-color: #75E4B3;
+  color: #2F2A26;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-content button:hover {
+  background-color: #D4A373;
+}
+
+/* Success message hidden by default */
+.success-message {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+  background-color:#D4A373;
+  padding: 15px;
+  border-radius: 8px;
+  color: #75E4B3;
+  font-weight: bold;
+}
+
+
